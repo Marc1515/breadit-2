@@ -39,6 +39,10 @@ const Page = () => {
             variant: "destructive",
           });
         }
+
+        if (err.response?.status === 401) {
+          return;
+        }
       }
     },
   });
