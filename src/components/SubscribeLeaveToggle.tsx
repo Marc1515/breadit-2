@@ -90,7 +90,11 @@ const SubscribeLeaveToggle: FC<SubscribeLeaveToggleProps> = ({
   });
 
   return isSubscribed ? (
-    <Button onClick={() => unsubscribe()} className="w-full mt-1 mb-4">
+    <Button
+      isLoading={isUnsubLoading}
+      onClick={() => unsubscribe()}
+      className="w-full mt-1 mb-4"
+    >
       Leave Community
     </Button>
   ) : (
